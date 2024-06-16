@@ -1,5 +1,7 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import { preview } from 'vite';
+
 
 
 
@@ -90,7 +92,10 @@ function imagesTemplate(arr) {
 const markup = imagesTemplate(images);
 ulEl.innerHTML = markup;
 
-let simplGallery = new SimpleLightbox('.gallery-link', {
-    captionsData: 'alt',
-    captionDelay: 250,
-});
+
+
+    let gallery = new SimpleLightbox('.gallery-link', {
+        captionsData: 'alt',
+        captionDelay: 250,
+    });
+
